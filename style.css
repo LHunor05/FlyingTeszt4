@@ -1,0 +1,938 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+/*Általános*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(kepek/klim-musalimov-Lwf49f-QzSI-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+}
+
+hr {
+    background-image: linear-gradient(to right, rgba(34, 33, 33, 0), rgba(70, 70, 70, 0.75), rgb(90, 5, 5));
+    height: 5px;
+    border: none;
+    margin: 20px auto;
+    width: 100%;
+}
+
+h1 {
+    font-variant: small-caps;
+}
+
+.szovegkozi_kiemeles {
+    font-weight: bold;
+}
+
+/*Menu*/
+.big-nav {
+    background-color: transparent;
+
+}
+
+.big-nav ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.szovegkozi-kep {
+    border: 5px solid rgb(37, 37, 37);
+    border-radius: 25px;
+}
+
+.big-nav li {
+    height: 50px;
+}
+
+.big-nav a {
+    display: flex;
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.big-nav a:hover {
+    background-color: rgb(17, 17, 17);
+    color: white;
+}
+
+.big-nav a:active {
+    color: white;
+    font-size: large;
+}
+
+#current {
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    color: white;
+    box-shadow: 0 0 20px 5px white;
+}
+
+.big-nav li:first-child {
+    margin-right: auto;
+}
+
+.disappear {
+    display: none;
+}
+
+#sidemenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(70, 70, 70, 0.9);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 999;
+}
+
+#sidemenu li {
+    width: 100%;
+}
+
+#sidemenu a {
+    width: 100%;
+}
+
+.logo {
+    background-color: transparent;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    box-shadow: 0 0 30px 15px white;
+}
+
+/*header*/
+header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    height: 100px;
+    padding: 20px 0 10px 0;
+    height: fit-content;
+}
+
+#header-one {
+    transition: 4s;
+}
+
+#header-two {
+    transition: 2s;
+}
+
+#header-three {
+    transition: 6s;
+}
+
+#header-one,
+#header-two,
+#header-three {
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    font-family: "UnifrakturCook", cursive;
+}
+
+.kezdolap-kep {
+    width: 100%;
+    height: 500px;
+    background-image: url(kepek/aircraft_fekete_piros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*képgalléria*/
+.slider {
+    width: 90%;
+    min-width: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: transparent;
+    
+}
+
+.slick-slide {
+    margin: 0;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: auto;
+    border: 10px solid white;
+    border-radius: 25px;
+   
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: white;
+
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    /*opacity: .2;*/
+}
+
+.slick-active {
+    opacity: .5;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+/*szöveg*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.prior,
+.crash,
+.cause,
+.aftermath,
+.legacy {
+    border-radius: 25px;
+    color: white;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    text-align: justify;
+    width: 100%;
+    background-color: rgb(17, 17, 17);
+}
+
+.prior {
+    border: 10px solid rgb(37, 37, 37);
+}
+
+.crash {
+    border: 10px solid rgb(70, 70, 70);
+}
+
+.cause {
+    border: 10px solid rgb(90, 5, 5);
+}
+
+.aftermath {
+    border: 10px solid rgb(37, 37, 37);
+}
+
+.legacy {
+    border: 10px solid rgb(70, 70, 70);
+}
+
+.prior:hover,
+.aftermath:hover,
+.crash:hover,
+.cause:hover,
+.legacy:hover {
+    transition: 0.3s ease-in-out;
+}
+
+.prior:hover {
+    box-shadow: 0 0 20px 5px rgb(37, 37, 37);
+}
+
+.crash:hover {
+    box-shadow: 0 0 20px 5px rgb(70, 70, 70);
+}
+
+.cause:hover {
+    box-shadow: 0 0 20px 5px rgb(90, 5, 5);
+}
+
+.aftermath:hover {
+    box-shadow: 0 0 20px 5px rgb(37, 37, 37);
+}
+
+.legacy:hover {
+    box-shadow: 0 0 20px 5px rgb(70, 70, 70);
+}
+
+/*Mini menu*/
+.aside-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    color: white;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px;
+    height: fit-content;
+}
+
+.aside-container ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 20px;
+}
+
+.aside-container aside {
+    border: 10px solid white;
+    border-radius: 25px;
+}
+
+.aside-container ul li {
+    border: 2px solid white;
+    border-radius: 25px;
+    margin: 4px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.aside-container a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.aside-container li:hover {
+    transition: 0.3s;
+    background-color: rgb(90, 5, 5);
+}
+
+.aside-container aside img {
+    padding: 10px;
+}
+
+.aside-container aside figcaption {
+    padding: 10px;
+}
+
+.aside-container aside p,
+.aside-container aside h1 {
+    padding: 10px;
+    text-align: justify;
+}
+
+.under-mini-nav {
+    border: 10px solid white;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.under-mini-nav:hover {
+    transition: 0.3s;
+    box-shadow: 0 0 20px 5px white;
+}
+
+/*Homepage*/
+.sotetszurke-section,
+.vilagosszurke-section,
+.voros-section {
+    border-radius: 25px;
+    color: white;
+    width: 100%;
+    margin: 20px;
+
+}
+
+.sotetszurke-section:hover,
+.vilagosszurke-section:hover,
+.voros-section:hover {
+    transition: all ease-in-out .5s;
+    margin: 10px;
+}
+
+.sotetszurke-section td,
+.vilagosszurke-section td,
+.voros-section td {
+    text-align: justify;
+    padding: 10px;
+}
+
+.sotetszurke-section td img,
+.vilagosszurke-section td img,
+.voros-section td img {
+    width: 100%;
+}
+
+.sotetszurke-section table tr:last-child,
+.vilagosszurke-section table tr:last-child,
+.voros-section table tr:last-child {
+    text-align: center;
+}
+
+.sotetszurke-section table tr:last-child td,
+.vilagosszurke-section table tr:last-child td,
+.voros-section table tr:last-child td {
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: transparent;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.sotetszurke-section table tr:last-child td:hover,
+.vilagosszurke-section table tr:last-child td:hover,
+.voros-section table tr:last-child td:hover {
+    transition: 0.3s ease;
+}
+
+.sotetszurke-section table tr:last-child td a,
+.vilagosszurke-section table tr:last-child td a,
+.voros-section table tr:last-child td a {
+    text-decoration: none;
+    color: white;
+}
+
+/*First section*/
+.sotetszurke-section {
+    background-color: rgb(17, 17, 17);
+    border: 10px solid rgb(37, 37, 37);
+}
+
+.sotetszurke-section:hover {
+    box-shadow: 0 0 20px 5px rgb(37, 37, 37);
+}
+
+.sotetszurke-section table tr:last-child td:hover {
+    background-color: rgb(37, 37, 37);
+}
+
+/*Second section*/
+.vilagosszurke-section {
+    background-color: rgb(17, 17, 17);
+    border: 10px solid rgb(70, 70, 70);
+}
+
+.vilagosszurke-section:hover {
+    box-shadow: 0 0 20px 5px rgb(70, 70, 70);
+}
+
+.vilagosszurke-section table tr:last-child td:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+/*Third section*/
+.voros-section {
+    background-color: rgb(17, 17, 17);
+    border: 10px solid rgb(90, 5, 5);
+}
+
+.voros-section:hover {
+    box-shadow: 0 0 20px 5px rgb(90, 5, 5);
+}
+
+.voros-section table tr:last-child td:hover {
+    background-color: rgb(90, 5, 5);
+}
+
+/*article*/
+.container hr:last-child {
+    margin: 10px;
+}
+
+.home_foszoveg,
+.history_record {
+    border: 10px solid white;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: justify;
+    margin: 20px;
+    font-size: large;
+}
+
+.home_foszoveg:hover {
+    box-shadow: 0 0 20px 5px #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+/*History*/
+.history_record {
+    display: flex;
+    border: 10px solid white;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: justify;
+    max-width: 600px;
+    font-size: large;
+    align-items: center;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.history_record:hover {
+    box-shadow: 0 0 20px 5px #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+.first-acc-pic {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+
+}
+
+.record_p {
+    width: 100%;
+    text-align: justify;
+}
+
+.history_record td {
+    border: 2px solid rgb(90, 5, 5);
+    padding: 5px;
+    width: 50%;
+}
+
+.history_record table {
+    border: 2px solid rgb(90, 5, 5);
+    border-collapse: collapse;
+    width: 70%;
+
+}
+
+.history_record tr:first-child td {
+    font-weight: bold;
+    background-color: rgb(70, 70, 70);
+}
+
+.history_record td:hover {
+    font-weight: bold;
+    background-color: rgb(90, 5, 5);
+}
+
+.fuel-consumption {
+    border: 10px solid white;
+    border-radius: 25px;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    padding: 10px;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}
+
+.fuel-consumption:hover {
+    box-shadow: 0 0 20px 5px white;
+    transition: 0.3s ease-in-out;
+
+}
+
+.comparison {
+    width: 100%;
+}
+
+.fedex-wreckage {
+    width: 100%;
+}
+
+/*Air New Zealand Flight 901*/
+.flight-zea-kep {
+    width: 100%;
+    height: 220px;
+    background-image: url(kepek/Mt_erebus_Flight_901.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#zea-remains {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*American Airlines Flight 191*/
+.aa-dc-10-img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.ohare:hover {
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 20px 5px white;
+}
+
+.flight-aa-kep {
+    width: 100%;
+    height: 400px;
+    background-image: url(kepek/Aa191_ohare.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+}
+
+.aa-caption {
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+.ohare img {
+    width: 100%;
+}
+
+.ohare figcaption {
+    text-align: center;
+    font-weight: bold;
+}
+
+#aa-remains,
+#zea-remains {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#aa-pylon {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*Turkish Airlines Flight 981*/
+#tur-remains {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.flight-tur-kep {
+    width: 100%;
+    height: 220px;
+    background-image: url(kepek/Douglas_DC-10_Turkish.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.tur-video{
+    width: 100%;
+}
+/*Down aside*/
+.aside-down {
+    display: flex;
+    flex-direction: column;
+    display: block;
+    border-radius: 25px;
+    color: white;
+    flex-wrap: wrap;
+    width: 100%;
+
+    margin: 20px;
+    height: fit-content;
+}
+
+.aside-down figure {
+    border: 10px solid white;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: rgb(17, 17, 17);
+
+}
+
+.aside-down figure:hover {
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 20px 5px white;
+}
+
+.aside-down figcaption {
+    text-align: center;
+    font-weight: bold;
+
+}
+
+/*questionnaire*/
+.questionnaire {
+    display: flex;
+    width: 100%;
+    background-color: rgb(17, 17, 17);
+    border: 10px solid rgb(90, 5, 5);
+    border-radius: 25px;
+    margin: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: white;
+}
+
+.questionnaire.left,
+.questionnaire.right {
+    width: 100%;
+}
+
+.terms-cond {
+    width: 100%;
+    padding: 10px;
+    text-align: justify;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.questionnaire:hover {
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 20px 5px rgb(90, 5, 5);
+}
+
+.right {
+    /*border-left: 10px solid rgb(90, 5, 5);*/
+    padding: 10px;
+}
+
+.left {
+    padding: 10px;
+}
+
+input[type=submit] {
+    background-color: rgb(17, 17, 17);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(90, 5, 5);
+    transition: 0.3s ease-in-out;
+}
+
+.quiz-title {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+
+    background-color: rgb(17, 17, 17);
+    margin: 20px;
+    border: 10px solid rgb(90, 5, 5);
+    padding: 10px;
+}
+
+.quiz-title:hover {
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 20px 5px rgb(90, 5, 5);
+}
+
+/*footer*/
+footer {
+    background-color: rgb(70, 70, 70);
+    color: white;
+    padding: 10px;
+    border-top: 10px solid rgb(90, 5, 5);
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+    .disappear {
+        display: flex;
+    }
+
+    .menugomb {
+        display: none;
+    }
+
+    .big-nav a:active {
+        color: white;
+        /*font-weight: bold;*/
+        /*background-color: black;*/
+        font-size: large;
+    }
+
+    .big-nav a:hover {
+        background-color: transparent;
+        color: white;
+        border-bottom: 2px solid white;
+
+    }
+
+    .sotetszurke-section,
+    .vilagosszurke-section {
+        width: 39%;
+        height: 700px;
+    }
+
+    .voros-section {
+        width: 100%;
+
+    }
+
+    .fuel-consumption {
+        width: 60%;
+        margin: auto;
+    }
+
+    /*Images*/
+    .flight-zea-kep {
+        height: 400px;
+    }
+
+    .kezdolap-kep {
+        height: 600px;
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) {
+    .disappear {
+        display: flex;
+    }
+
+    .menugomb {
+        display: none;
+    }
+
+    .big-nav a:active {
+        color: white;
+        font-size: large;
+    }
+
+    .big-nav a:hover {
+        background-color: transparent;
+        color: white;
+        border-bottom: 2px solid white;
+
+    }
+
+    .sotetszurke-section,
+    .vilagosszurke-section,
+    .voros-section {
+        width: 29%;
+        height: 700px;
+        margin: 15px;
+    }
+
+    .fuel-consumption {
+        width: 100%;
+    }
+
+    .record_p {
+        width: 60%;
+    }
+
+    /*images*/
+    .kezdolap-kep {
+        height: 650px;
+    }
+
+    .first-acc-pic {
+        width: 30%;
+    }
+
+    .flight-zea-kep {
+        height: 650px;
+    }
+
+    .flight-aa-kep {
+        height: 600px;
+        background-size: contain;
+    }
+
+    #aa-remains {
+        width: 40%;
+    }
+
+    #zea-remains {
+        width: 30%;
+    }
+
+    .aa-dc-10-img {
+        width: 40%;
+    }
+
+    #tur-remains {
+        width: 20%;
+    }
+
+    .flight-tur-kep {
+        height: 450px;
+    }
+
+    /*Box*/
+    .aside-container {
+        width: 30%;
+    }
+
+    .prior {
+        width: 59%;
+    }
+
+    .crash {
+        width: 100%;
+    }
+
+    .cause {
+        width: 44.5%;
+    }
+
+    .aftermath {
+        width: 44.5%;
+    }
+
+    .legacy {
+        width: 47.5%;
+    }
+
+    .aside-down {
+        width: 41%;
+    }
+
+    .questionnaire div {
+        width: 50%;
+    }
+
+    .right {
+        border-left: 10px solid rgb(90, 5, 5);
+    }
+
+    .left {
+        border-right: 10px solid rgb(90, 5, 5);
+    }
+
+    .terms-cond {
+        width: 90%;
+    }
+
+    .zea-legacy {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
